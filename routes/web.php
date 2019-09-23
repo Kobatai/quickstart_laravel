@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use App\Task;
+use Illuminate\Http\Request;
+
+//タスク一覧表示
+Route::get('/',function(){
+
 });
+
+//タスク追加
+Route::post('/task',function(Request $request){
+  //Request $requestでPOSTの値を取得できる
+  // use Illuminate\Http\Request;を書かないとエラーになる
+
+})
+
+//タスク削除
+Route::delete('task/{task}',function(Task $task){
+  //{task}という記述で消すtaskを特定し、Task $taskにパラメーターを送る
+  //use App\Task;がないとエラーになる
+})
